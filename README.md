@@ -1,15 +1,16 @@
-# Indian Contract Act, 1872 — Complete Flowchart
+# Indian Contract Act, 1872 — Complete Mind Map
 
-A zoomable, searchable, continuous flowchart covering every topic and point in the supplied 74-slide Unit 2 presentation.
+A zoomable, searchable legal mind map covering every topic and point in the supplied 74-slide Unit 2 presentation.
 
 ## What is included
 
 - All 74 source slides, in source order
-- One uninterrupted arrow chain from the opening unit slide through injunctions
+- A central Contract Act root with eight sweeping, continuous topic branches
+- Compact map cards that open the full source-faithful slide text
 - Full-text search across every slide
 - Section jump controls
 - Mouse, trackpad, touch, and button-based pan/zoom controls
-- Responsive layout for desktop and mobile
+- A dedicated mobile knowledge-tree layout with readable cards and continuous vertical branches
 
 ## Run locally
 
