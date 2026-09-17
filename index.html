@@ -3,54 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A complete, continuous flowchart of all 74 slides from Unit 2: The Indian Contract Act, 1872." />
-    <meta name="theme-color" content="#071a2a" />
-    <title>Indian Contract Act, 1872 — Complete Flowchart</title>
+    <meta name="description" content="A complete, interactive mind map of all 74 slides from Unit 2: The Indian Contract Act, 1872." />
+    <meta name="theme-color" content="#eee9dc" />
+    <title>Indian Contract Act, 1872 — Complete Mind Map</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="masthead">
       <div class="title-block">
-        <p class="eyebrow">UNIT 2 · COMPLETE STUDY MAP</p>
+        <p class="eyebrow">UNIT 2 · COMPLETE MIND MAP</p>
         <h1>The Indian Contract Act, 1872</h1>
-        <p class="dek">Every topic and point from the 74-slide source, connected as one continuous food-chain flow.</p>
+        <p class="dek">Every topic and point from the supplied 74-slide source, arranged as one explorable legal knowledge tree.</p>
       </div>
       <div class="stats" aria-label="Document coverage">
         <div><strong>74</strong><span>source slides</span></div>
-        <div><strong id="topic-count">74</strong><span>connected nodes</span></div>
+        <div><strong>8</strong><span>main branches</span></div>
         <div><strong>100%</strong><span>source text retained</span></div>
       </div>
     </header>
 
-    <nav class="section-nav" id="section-nav" aria-label="Jump to a section"></nav>
+    <nav class="section-nav" id="section-nav" aria-label="Jump to a branch"></nav>
 
-    <section class="toolbar" aria-label="Flowchart controls">
+    <section class="toolbar" aria-label="Mind-map controls">
       <label class="search-box">
         <span class="sr-only">Search every topic and point</span>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
         <input id="search" type="search" placeholder="Search all 74 slides…" autocomplete="off" />
       </label>
-      <span class="search-status" id="search-status" aria-live="polite">All nodes visible</span>
-      <div class="tool-buttons">
+      <span class="search-status" id="search-status" aria-live="polite">All topics visible</span>
+      <div class="tool-buttons desktop-tools">
         <button id="zoom-out" type="button" title="Zoom out" aria-label="Zoom out">−</button>
         <button id="zoom-label" type="button" title="Reset zoom">100%</button>
         <button id="zoom-in" type="button" title="Zoom in" aria-label="Zoom in">+</button>
-        <button class="text-button" id="fit" type="button">Fit all</button>
-        <button class="text-button" id="start" type="button">Start</button>
+        <button class="text-button" id="fit" type="button">Fit map</button>
+        <button class="text-button" id="center" type="button">Center</button>
       </div>
     </section>
 
-    <main class="viewport" id="viewport" tabindex="0" aria-label="Zoomable continuous flowchart. Drag to pan and use the mouse wheel to zoom.">
-      <div class="canvas" id="flow-canvas">
-        <svg class="chain-layer" id="chain-layer" aria-hidden="true"></svg>
-        <div class="node-layer" id="node-layer"></div>
-      </div>
-      <div class="gesture-hint" id="gesture-hint">Drag to pan · Scroll to zoom · Every arrow continues to the next slide</div>
+    <main>
+      <section class="viewport" id="viewport" tabindex="0" aria-label="Zoomable mind map. Drag to pan and use the mouse wheel to zoom.">
+        <div class="canvas" id="mind-canvas">
+          <svg class="branch-layer" id="branch-layer" aria-hidden="true"></svg>
+          <div class="panel-layer" id="panel-layer"></div>
+          <div class="node-layer" id="node-layer"></div>
+          <div class="root-hub" id="root-hub">
+            <div class="legal-seal" aria-hidden="true"><span>§</span><i></i><i></i><i></i></div>
+            <p>THE ROOT</p>
+            <h2>Indian Contract Act</h2>
+            <span class="year">1872</span>
+          </div>
+        </div>
+        <div class="gesture-hint" id="gesture-hint">Drag to explore · Scroll to zoom · Select any card for every point</div>
+      </section>
+
+      <section class="mobile-map" id="mobile-map" aria-label="Mobile mind map"></section>
     </main>
 
-    <footer>
-      <p>Source-faithful educational flowchart based only on the supplied PowerPoint.</p>
-      <p>The chain reads left → right, then turns downward and continues right → left.</p>
+    <dialog class="detail-dialog" id="detail-dialog">
+      <article>
+        <header>
+          <div><p id="detail-section"></p><h2 id="detail-title"></h2></div>
+          <button id="detail-close" type="button" aria-label="Close details">×</button>
+        </header>
+        <div class="detail-body" id="detail-body"></div>
+        <footer class="dialog-footer">
+          <button id="detail-prev" type="button">← Previous</button>
+          <span id="detail-count"></span>
+          <button id="detail-next" type="button">Next →</button>
+        </footer>
+      </article>
+    </dialog>
+
+    <footer class="site-footer">
+      <p>Source-faithful educational mind map based only on the supplied PowerPoint.</p>
+      <p>Desktop: radiating branches · Mobile: continuous vertical knowledge tree.</p>
     </footer>
 
     <script src="content.js"></script>
